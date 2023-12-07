@@ -1,0 +1,530 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><title>Cosmic Ray Report</title></head><body><div class="container"><h1><p class="text-dark">Cosmic Ray Report</p></h1></div><div class="container"><div class="mb-1" id="summary_info___accordion"><div class="card"><a data-toggle="collapse" data-target="#summary_info___collapse_1" aria-expanded="true" aria-controls="summary_info___collapse_1" href="#"><div class="card-header" id="summary_info___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Summary info</h4></button></div></a><div aria-labelledby="summary_info___heading_1" data-parent="#summary_info___accordion" class="collapse show" id="summary_info___collapse_1"><div class="card-body"><p>Date time: 07/12/2023 14:32:23</p><p>Total jobs: 11</p><p>Complete: 11 (100.00%)</p><p>Surviving mutants: 1 (9.09%)</p></div></div></div></div><div class="mb-1" id="job_list___accordion"><div class="card"><a data-toggle="collapse" data-target="#job_list___collapse_1" aria-expanded="false" aria-controls="job_list___collapse_1" href="#"><div class="card-header" id="job_list___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Job list</h4></button></div></a><div aria-labelledby="job_list___heading_1" data-parent="#job_list___accordion" class="collapse" id="job_list___collapse_1"><div class="card-body"><div class="text-right mb-1"><div class="mx-1" id="job_item_expand_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('show');"><button class="btn btn-outline-dark"><span>Expand All</span></button></a></div><div class="mx-1" id="job_item_collapse_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('hide');"><button class="btn btn-outline-dark"><span>Collapse All</span></button></a></div></div><div class="mb-1" id="job_list___sub_accordion_1"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_1_1" aria-expanded="false" aria-controls="job_list___sub_collapse_1_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_1_1"><button class="btn btn-outline-success"><span class="job_id">1 : Job ID 17ff1d8cf16b4b07bb6b83cfd7eafdb9</span></button></div></a><div aria-labelledby="job_list___sub_heading_1_1" data-parent="#job_list___sub_accordion_1" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_1_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_Add, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a+b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">FFFFF
+======================================================================
+FAIL: test_divide_by_one (prime2_test.TestPrimeFile.test_divide_by_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 43, in test_divide_by_one
+    self.assertEqual(divide(10, 1), 10)
+AssertionError: 11 != 10
+
+======================================================================
+FAIL: test_divide_by_zero (prime2_test.TestPrimeFile.test_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 30, in test_divide_by_zero
+    with self.assertRaises(ZeroDivisionError):
+AssertionError: ZeroDivisionError not raised
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: -8 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 12 != 5
+
+======================================================================
+FAIL: test_zero_divided_by_number (prime2_test.TestPrimeFile.test_zero_divided_by_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 47, in test_zero_divided_by_number
+    self.assertEqual(divide(0, 1), 0)
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+FAILED (failures=5)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_2"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_2_1" aria-expanded="false" aria-controls="job_list___sub_collapse_2_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_2_1"><button class="btn btn-outline-success"><span class="job_id">2 : Job ID e9875d56514144c2b5c756ca68c763bc</span></button></div></a><div aria-labelledby="job_list___sub_heading_2_1" data-parent="#job_list___sub_accordion_2" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_2_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_Sub, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a-b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">FFFFF
+======================================================================
+FAIL: test_divide_by_one (prime2_test.TestPrimeFile.test_divide_by_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 43, in test_divide_by_one
+    self.assertEqual(divide(10, 1), 10)
+AssertionError: 9 != 10
+
+======================================================================
+FAIL: test_divide_by_zero (prime2_test.TestPrimeFile.test_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 30, in test_divide_by_zero
+    with self.assertRaises(ZeroDivisionError):
+AssertionError: ZeroDivisionError not raised
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: -12 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 8 != 5
+
+======================================================================
+FAIL: test_zero_divided_by_number (prime2_test.TestPrimeFile.test_zero_divided_by_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 47, in test_zero_divided_by_number
+    self.assertEqual(divide(0, 1), 0)
+AssertionError: -1 != 0
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+FAILED (failures=5)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_3"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_3_1" aria-expanded="false" aria-controls="job_list___sub_collapse_3_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_3_1"><button class="btn btn-outline-success"><span class="job_id">3 : Job ID 3ef7e8a50c8a4adead791e55e62ccc3d</span></button></div></a><div aria-labelledby="job_list___sub_heading_3_1" data-parent="#job_list___sub_accordion_3" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_3_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_Mul, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a*b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">.FFF.
+======================================================================
+FAIL: test_divide_by_zero (prime2_test.TestPrimeFile.test_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 30, in test_divide_by_zero
+    with self.assertRaises(ZeroDivisionError):
+AssertionError: ZeroDivisionError not raised
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: -20 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 20 != 5
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+FAILED (failures=3)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_4"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_4_1" aria-expanded="false" aria-controls="job_list___sub_collapse_4_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_4_1"><button class="btn btn-outline-danger"><span class="job_id">4 : Job ID aee17ecf834247da93da881184720c7d</span></button></div></a><div aria-labelledby="job_list___sub_heading_4_1" data-parent="#job_list___sub_accordion_4" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_4_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.SURVIVED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_FloorDiv, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a//b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_5"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_5_1" aria-expanded="false" aria-controls="job_list___sub_collapse_5_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_5_1"><button class="btn btn-outline-success"><span class="job_id">5 : Job ID cd37c68b2c3e4de8a50c24314ab29313</span></button></div></a><div aria-labelledby="job_list___sub_heading_5_1" data-parent="#job_list___sub_accordion_5" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_5_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_Mod, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a%b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">F.FF.
+======================================================================
+FAIL: test_divide_by_one (prime2_test.TestPrimeFile.test_divide_by_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 43, in test_divide_by_one
+    self.assertEqual(divide(10, 1), 10)
+AssertionError: 0 != 10
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: 0 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 0 != 5
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+FAILED (failures=3)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_6"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_6_1" aria-expanded="false" aria-controls="job_list___sub_collapse_6_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_6_1"><button class="btn btn-outline-success"><span class="job_id">6 : Job ID f9bb2f66c71d4364b26a4ec5fa2334b7</span></button></div></a><div aria-labelledby="job_list___sub_heading_6_1" data-parent="#job_list___sub_accordion_6" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_6_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_Pow, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a**b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">.FFFE
+======================================================================
+ERROR: test_zero_divided_by_number (prime2_test.TestPrimeFile.test_zero_divided_by_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 48, in test_zero_divided_by_number
+    self.assertEqual(divide(0, -1), 0)
+                     ^^^^^^^^^^^^^
+  File "/Users/qt/Working/mutation/prime.py", line 19, in divide
+    return a**b
+           ~^^~
+ZeroDivisionError: 0.0 cannot be raised to a negative power
+
+======================================================================
+FAIL: test_divide_by_zero (prime2_test.TestPrimeFile.test_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 30, in test_divide_by_zero
+    with self.assertRaises(ZeroDivisionError):
+AssertionError: ZeroDivisionError not raised
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: 100 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 100 != 5
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=3, errors=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_7"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_7_1" aria-expanded="false" aria-controls="job_list___sub_collapse_7_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_7_1"><button class="btn btn-outline-success"><span class="job_id">7 : Job ID 1e28ed576c57423cb426ed3cef345873</span></button></div></a><div aria-labelledby="job_list___sub_heading_7_1" data-parent="#job_list___sub_accordion_7" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_7_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_RShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a&gt;&gt;b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">FFFFE
+======================================================================
+ERROR: test_zero_divided_by_number (prime2_test.TestPrimeFile.test_zero_divided_by_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 48, in test_zero_divided_by_number
+    self.assertEqual(divide(0, -1), 0)
+                     ^^^^^^^^^^^^^
+  File "/Users/qt/Working/mutation/prime.py", line 19, in divide
+    return a&gt;&gt;b
+           ~^^~
+ValueError: negative shift count
+
+======================================================================
+FAIL: test_divide_by_one (prime2_test.TestPrimeFile.test_divide_by_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 43, in test_divide_by_one
+    self.assertEqual(divide(10, 1), 10)
+AssertionError: 5 != 10
+
+======================================================================
+FAIL: test_divide_by_zero (prime2_test.TestPrimeFile.test_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 30, in test_divide_by_zero
+    with self.assertRaises(ZeroDivisionError):
+AssertionError: ZeroDivisionError not raised
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: -3 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 2 != 5
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=4, errors=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_8"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_8_1" aria-expanded="false" aria-controls="job_list___sub_collapse_8_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_8_1"><button class="btn btn-outline-success"><span class="job_id">8 : Job ID 468d3f6fc7114cbf836da53da191e340</span></button></div></a><div aria-labelledby="job_list___sub_heading_8_1" data-parent="#job_list___sub_accordion_8" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_8_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_LShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a&lt;&lt;b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">FFFFE
+======================================================================
+ERROR: test_zero_divided_by_number (prime2_test.TestPrimeFile.test_zero_divided_by_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 48, in test_zero_divided_by_number
+    self.assertEqual(divide(0, -1), 0)
+                     ^^^^^^^^^^^^^
+  File "/Users/qt/Working/mutation/prime.py", line 19, in divide
+    return a&lt;&lt;b
+           ~^^~
+ValueError: negative shift count
+
+======================================================================
+FAIL: test_divide_by_one (prime2_test.TestPrimeFile.test_divide_by_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 43, in test_divide_by_one
+    self.assertEqual(divide(10, 1), 10)
+AssertionError: 20 != 10
+
+======================================================================
+FAIL: test_divide_by_zero (prime2_test.TestPrimeFile.test_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 30, in test_divide_by_zero
+    with self.assertRaises(ZeroDivisionError):
+AssertionError: ZeroDivisionError not raised
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: -40 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 40 != 5
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=4, errors=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_9"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_9_1" aria-expanded="false" aria-controls="job_list___sub_collapse_9_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_9_1"><button class="btn btn-outline-success"><span class="job_id">9 : Job ID f465ad64afd14ce8b0e032f796b60936</span></button></div></a><div aria-labelledby="job_list___sub_heading_9_1" data-parent="#job_list___sub_accordion_9" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_9_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_BitOr, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a|b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">FFFFF
+======================================================================
+FAIL: test_divide_by_one (prime2_test.TestPrimeFile.test_divide_by_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 43, in test_divide_by_one
+    self.assertEqual(divide(10, 1), 10)
+AssertionError: 11 != 10
+
+======================================================================
+FAIL: test_divide_by_zero (prime2_test.TestPrimeFile.test_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 30, in test_divide_by_zero
+    with self.assertRaises(ZeroDivisionError):
+AssertionError: ZeroDivisionError not raised
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: -10 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 10 != 5
+
+======================================================================
+FAIL: test_zero_divided_by_number (prime2_test.TestPrimeFile.test_zero_divided_by_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 47, in test_zero_divided_by_number
+    self.assertEqual(divide(0, 1), 0)
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=5)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_10"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_10_1" aria-expanded="false" aria-controls="job_list___sub_collapse_10_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_10_1"><button class="btn btn-outline-success"><span class="job_id">10 : Job ID df2898d0eee74d06a168e6028a27e54e</span></button></div></a><div aria-labelledby="job_list___sub_heading_10_1" data-parent="#job_list___sub_accordion_10" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_10_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_BitAnd, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a&amp;b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">FFFF.
+======================================================================
+FAIL: test_divide_by_one (prime2_test.TestPrimeFile.test_divide_by_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 43, in test_divide_by_one
+    self.assertEqual(divide(10, 1), 10)
+AssertionError: 0 != 10
+
+======================================================================
+FAIL: test_divide_by_zero (prime2_test.TestPrimeFile.test_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 30, in test_divide_by_zero
+    with self.assertRaises(ZeroDivisionError):
+AssertionError: ZeroDivisionError not raised
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: 2 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 2 != 5
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=4)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_11"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_11_1" aria-expanded="false" aria-controls="job_list___sub_collapse_11_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_11_1"><button class="btn btn-outline-success"><span class="job_id">11 : Job ID f0248b6a0c104d4d93b79ee7c2167afa</span></button></div></a><div aria-labelledby="job_list___sub_heading_11_1" data-parent="#job_list___sub_accordion_11" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_11_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=19" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (19, 12), end pos: (19, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Div_BitXor, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -16,6 +16,6 @@
+     
+ 
+ def divide(a, b):
+-    return a/b
++    return a^b
+     
+ </pre></div><div class="alert alert-secondary"><pre class="diff">FFFFF
+======================================================================
+FAIL: test_divide_by_one (prime2_test.TestPrimeFile.test_divide_by_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 43, in test_divide_by_one
+    self.assertEqual(divide(10, 1), 10)
+AssertionError: 11 != 10
+
+======================================================================
+FAIL: test_divide_by_zero (prime2_test.TestPrimeFile.test_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 30, in test_divide_by_zero
+    with self.assertRaises(ZeroDivisionError):
+AssertionError: ZeroDivisionError not raised
+
+======================================================================
+FAIL: test_negative_numbers (prime2_test.TestPrimeFile.test_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 38, in test_negative_numbers
+    self.assertEqual(divide(-10, 2), -5)
+AssertionError: -12 != -5
+
+======================================================================
+FAIL: test_positive_numbers (prime2_test.TestPrimeFile.test_positive_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 34, in test_positive_numbers
+    self.assertEqual(divide(10, 2), 5)
+AssertionError: 8 != 5
+
+======================================================================
+FAIL: test_zero_divided_by_number (prime2_test.TestPrimeFile.test_zero_divided_by_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime2_test.py", line 47, in test_zero_divided_by_number
+    self.assertEqual(divide(0, 1), 0)
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=5)
+</pre></div></div></div></div></div></div></div></div></div></div><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script type="text/javascript">$('div.job_list___sub_multi_collapse').on('shown.bs.collapse',  function () {    correct_behavior_functional_buttons();  });$('div.job_list___sub_multi_collapse').on('hidden.bs.collapse',  function () {    correct_behavior_functional_buttons();  });function correct_behavior_functional_buttons() {    var expand = false;    var collapse = false;    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'false') {        expand = true;        return false;      };    });    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'true') {        collapse = true;        return false;      };    });    if (expand) {      $('div#job_item_expand_all').css('display', 'inline-block');    } else {      $('div#job_item_expand_all').css('display', 'none');    };    if (collapse) {      $('div#job_item_collapse_all').css('display', 'inline-block');    } else {      $('div#job_item_collapse_all').css('display', 'none');    };  };correct_behavior_functional_buttons();</script></body></html>

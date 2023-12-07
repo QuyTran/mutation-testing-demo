@@ -1,0 +1,14 @@
+{
+    "python.analysis.extraPaths": [
+        "./src"
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:mutation}/tutorial_prime.sqlite",
+            "name": "tét"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

@@ -1,0 +1,1549 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><title>Cosmic Ray Report</title></head><body><div class="container"><h1><p class="text-dark">Cosmic Ray Report</p></h1></div><div class="container"><div class="mb-1" id="summary_info___accordion"><div class="card"><a data-toggle="collapse" data-target="#summary_info___collapse_1" aria-expanded="true" aria-controls="summary_info___collapse_1" href="#"><div class="card-header" id="summary_info___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Summary info</h4></button></div></a><div aria-labelledby="summary_info___heading_1" data-parent="#summary_info___accordion" class="collapse show" id="summary_info___collapse_1"><div class="card-body"><p>Date time: 07/12/2023 15:26:33</p><p>Total jobs: 59</p><p>Complete: 59 (100.00%)</p><p>Surviving mutants: 5 (8.47%)</p></div></div></div></div><div class="mb-1" id="job_list___accordion"><div class="card"><a data-toggle="collapse" data-target="#job_list___collapse_1" aria-expanded="false" aria-controls="job_list___collapse_1" href="#"><div class="card-header" id="job_list___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Job list</h4></button></div></a><div aria-labelledby="job_list___heading_1" data-parent="#job_list___accordion" class="collapse" id="job_list___collapse_1"><div class="card-body"><div class="text-right mb-1"><div class="mx-1" id="job_item_expand_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('show');"><button class="btn btn-outline-dark"><span>Expand All</span></button></a></div><div class="mx-1" id="job_item_collapse_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('hide');"><button class="btn btn-outline-dark"><span>Collapse All</span></button></a></div></div><div class="mb-1" id="job_list___sub_accordion_1"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_1_1" aria-expanded="false" aria-controls="job_list___sub_collapse_1_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_1_1"><button class="btn btn-outline-success"><span class="job_id">1 : Job ID a2d302d553fd4ba8b4282a40ea56c4bf</span></button></div></a><div aria-labelledby="job_list___sub_heading_1_1" data-parent="#job_list___sub_accordion_1" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_1_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Sub, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) - 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_2"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_2_1" aria-expanded="false" aria-controls="job_list___sub_collapse_2_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_2_1"><button class="btn btn-outline-success"><span class="job_id">2 : Job ID 304b6497f45045a38766a1dc4c2eb65f</span></button></div></a><div aria-labelledby="job_list___sub_heading_2_1" data-parent="#job_list___sub_accordion_2" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_2_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Mul, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) * 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_3"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_3_1" aria-expanded="false" aria-controls="job_list___sub_collapse_3_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_3_1"><button class="btn btn-outline-success"><span class="job_id">3 : Job ID fefa4e78d2cb4250b3805be15e75347c</span></button></div></a><div aria-labelledby="job_list___sub_heading_3_1" data-parent="#job_list___sub_accordion_3" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_3_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Div, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) / 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.EE.
+======================================================================
+ERROR: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+                     ^^^^^^^^^^^^
+  File "/Users/qt/Working/mutation/prime.py", line 6, in is_prime2
+    for i in range(2, int(sqrt(n)) / 1):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'float' object cannot be interpreted as an integer
+
+======================================================================
+ERROR: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+                    ^^^^^^^^^^^^
+  File "/Users/qt/Working/mutation/prime.py", line 6, in is_prime2
+    for i in range(2, int(sqrt(n)) / 1):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'float' object cannot be interpreted as an integer
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (errors=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_4"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_4_1" aria-expanded="false" aria-controls="job_list___sub_collapse_4_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_4_1"><button class="btn btn-outline-success"><span class="job_id">4 : Job ID 53c74e28f7344e01b06df03702fa66a8</span></button></div></a><div aria-labelledby="job_list___sub_heading_4_1" data-parent="#job_list___sub_accordion_4" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_4_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_FloorDiv, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) // 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_5"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_5_1" aria-expanded="false" aria-controls="job_list___sub_collapse_5_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_5_1"><button class="btn btn-outline-success"><span class="job_id">5 : Job ID 1d2f653d215145edaa3b8541d2fc048d</span></button></div></a><div aria-labelledby="job_list___sub_heading_5_1" data-parent="#job_list___sub_accordion_5" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_5_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Mod, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) % 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_6"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_6_1" aria-expanded="false" aria-controls="job_list___sub_collapse_6_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_6_1"><button class="btn btn-outline-success"><span class="job_id">6 : Job ID 6be43bf4b8c14b60801b94e42f549853</span></button></div></a><div aria-labelledby="job_list___sub_heading_6_1" data-parent="#job_list___sub_accordion_6" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_6_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Pow, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) ** 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_7"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_7_1" aria-expanded="false" aria-controls="job_list___sub_collapse_7_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_7_1"><button class="btn btn-outline-success"><span class="job_id">7 : Job ID 7dcea1725ae84340b305caf8314b7ff1</span></button></div></a><div aria-labelledby="job_list___sub_heading_7_1" data-parent="#job_list___sub_accordion_7" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_7_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_RShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) &gt;&gt; 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_8"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_8_1" aria-expanded="false" aria-controls="job_list___sub_collapse_8_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_8_1"><button class="btn btn-outline-danger"><span class="job_id">8 : Job ID 938d79e33eda4f498db8519bca98a7ca</span></button></div></a><div aria-labelledby="job_list___sub_heading_8_1" data-parent="#job_list___sub_accordion_8" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_8_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.SURVIVED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_LShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) &lt;&lt; 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_9"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_9_1" aria-expanded="false" aria-controls="job_list___sub_collapse_9_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_9_1"><button class="btn btn-outline-success"><span class="job_id">9 : Job ID 4386704553a14db393198657d18af743</span></button></div></a><div aria-labelledby="job_list___sub_heading_9_1" data-parent="#job_list___sub_accordion_9" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_9_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_BitOr, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) | 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 26, in test_non_prime_numbers
+    self.assertFalse(is_prime2(9))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_10"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_10_1" aria-expanded="false" aria-controls="job_list___sub_collapse_10_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_10_1"><button class="btn btn-outline-success"><span class="job_id">10 : Job ID 21c2efb5020149eebd701c060862d5e5</span></button></div></a><div aria-labelledby="job_list___sub_heading_10_1" data-parent="#job_list___sub_accordion_10" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_10_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_BitAnd, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) &amp; 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_11"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_11_1" aria-expanded="false" aria-controls="job_list___sub_collapse_11_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_11_1"><button class="btn btn-outline-success"><span class="job_id">11 : Job ID 0da85a1f83d348ec8851b7d68559d8b7</span></button></div></a><div aria-labelledby="job_list___sub_heading_11_1" data-parent="#job_list___sub_accordion_11" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_11_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 39), end pos: (6, 40)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_BitXor, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) ^ 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 26, in test_non_prime_numbers
+    self.assertFalse(is_prime2(9))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_12"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_12_1" aria-expanded="false" aria-controls="job_list___sub_collapse_12_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_12_1"><button class="btn btn-outline-success"><span class="job_id">12 : Job ID c64a13099afd4a329bd282f4f29529b9</span></button></div></a><div aria-labelledby="job_list___sub_heading_12_1" data-parent="#job_list___sub_accordion_12" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_12_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_Add, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n + i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_13"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_13_1" aria-expanded="false" aria-controls="job_list___sub_collapse_13_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_13_1"><button class="btn btn-outline-success"><span class="job_id">13 : Job ID 6f02534e518047c4b32b7fab7d913108</span></button></div></a><div aria-labelledby="job_list___sub_heading_13_1" data-parent="#job_list___sub_accordion_13" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_13_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_Sub, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n - i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_14"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_14_1" aria-expanded="false" aria-controls="job_list___sub_collapse_14_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_14_1"><button class="btn btn-outline-success"><span class="job_id">14 : Job ID 310208a08c7f4c3aa334e20c4df703ed</span></button></div></a><div aria-labelledby="job_list___sub_heading_14_1" data-parent="#job_list___sub_accordion_14" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_14_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_Mul, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n * i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_15"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_15_1" aria-expanded="false" aria-controls="job_list___sub_collapse_15_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_15_1"><button class="btn btn-outline-success"><span class="job_id">15 : Job ID 00249769289c49dabd51f439057566bc</span></button></div></a><div aria-labelledby="job_list___sub_heading_15_1" data-parent="#job_list___sub_accordion_15" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_15_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_Div, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n / i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_16"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_16_1" aria-expanded="false" aria-controls="job_list___sub_collapse_16_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_16_1"><button class="btn btn-outline-success"><span class="job_id">16 : Job ID 2adf1f2e35b54e46abce1cc80d610b38</span></button></div></a><div aria-labelledby="job_list___sub_heading_16_1" data-parent="#job_list___sub_accordion_16" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_16_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_FloorDiv, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n // i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_17"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_17_1" aria-expanded="false" aria-controls="job_list___sub_collapse_17_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_17_1"><button class="btn btn-outline-success"><span class="job_id">17 : Job ID 04ff38df09f94b899b6933b943fa6b6c</span></button></div></a><div aria-labelledby="job_list___sub_heading_17_1" data-parent="#job_list___sub_accordion_17" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_17_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_Pow, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n ** i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_18"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_18_1" aria-expanded="false" aria-controls="job_list___sub_collapse_18_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_18_1"><button class="btn btn-outline-success"><span class="job_id">18 : Job ID 2052b37b5a5d4d9286189bd4518b192d</span></button></div></a><div aria-labelledby="job_list___sub_heading_18_1" data-parent="#job_list___sub_accordion_18" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_18_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_RShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n &gt;&gt; i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_19"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_19_1" aria-expanded="false" aria-controls="job_list___sub_collapse_19_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_19_1"><button class="btn btn-outline-success"><span class="job_id">19 : Job ID bc68358616924a43b044c34c9dd098dc</span></button></div></a><div aria-labelledby="job_list___sub_heading_19_1" data-parent="#job_list___sub_accordion_19" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_19_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_LShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n &lt;&lt; i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_20"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_20_1" aria-expanded="false" aria-controls="job_list___sub_collapse_20_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_20_1"><button class="btn btn-outline-success"><span class="job_id">20 : Job ID 977350c2ce2245c2986d29c4f3c8cbde</span></button></div></a><div aria-labelledby="job_list___sub_heading_20_1" data-parent="#job_list___sub_accordion_20" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_20_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_BitOr, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n | i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_21"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_21_1" aria-expanded="false" aria-controls="job_list___sub_collapse_21_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_21_1"><button class="btn btn-outline-success"><span class="job_id">21 : Job ID a1d9e146ab2548e2bf5578b211d16772</span></button></div></a><div aria-labelledby="job_list___sub_heading_21_1" data-parent="#job_list___sub_accordion_21" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_21_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_BitAnd, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n &amp; i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.FF.
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 24, in test_non_prime_numbers
+    self.assertFalse(is_prime2(6))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 17, in test_prime_numbers
+    self.assertTrue(is_prime2(5))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_22"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_22_1" aria-expanded="false" aria-controls="job_list___sub_collapse_22_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_22_1"><button class="btn btn-outline-success"><span class="job_id">22 : Job ID 41ddf9bec34a4f52b52a73692776624f</span></button></div></a><div aria-labelledby="job_list___sub_heading_22_1" data-parent="#job_list___sub_accordion_22" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_22_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 18), end pos: (7, 19)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Mod_BitXor, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n ^ i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_23"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_23_1" aria-expanded="false" aria-controls="job_list___sub_collapse_23_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_23_1"><button class="btn btn-outline-success"><span class="job_id">23 : Job ID b83dac4e6c5740adb313cdb8e77b91c1</span></button></div></a><div aria-labelledby="job_list___sub_heading_23_1" data-parent="#job_list___sub_accordion_23" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_23_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 22), end pos: (7, 24)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_NotEq, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n % i != 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.FF.
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 17, in test_prime_numbers
+    self.assertTrue(is_prime2(5))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_24"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_24_1" aria-expanded="false" aria-controls="job_list___sub_collapse_24_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_24_1"><button class="btn btn-outline-success"><span class="job_id">24 : Job ID 0f96c33d05fa41d3baf9ae9e7f363d5b</span></button></div></a><div aria-labelledby="job_list___sub_heading_24_1" data-parent="#job_list___sub_accordion_24" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_24_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=10" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (10, 23), end pos: (10, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_NotEq, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -7,7 +7,7 @@
+             if (n % i == 0):
+                 prime_flag = 1
+                 break
+-        if (prime_flag == 0):
++        if (prime_flag != 0):
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">.FF.
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_25"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_25_1" aria-expanded="false" aria-controls="job_list___sub_collapse_25_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_25_1"><button class="btn btn-outline-success"><span class="job_id">25 : Job ID e514d9a3aa8d4a378345c64636dcd90e</span></button></div></a><div aria-labelledby="job_list___sub_heading_25_1" data-parent="#job_list___sub_accordion_25" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_25_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 22), end pos: (7, 24)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Lt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n % i &lt; 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_26"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_26_1" aria-expanded="false" aria-controls="job_list___sub_collapse_26_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_26_1"><button class="btn btn-outline-success"><span class="job_id">26 : Job ID 0eb55d55fd5d4259a5be0f431f788ec2</span></button></div></a><div aria-labelledby="job_list___sub_heading_26_1" data-parent="#job_list___sub_accordion_26" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_26_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=10" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (10, 23), end pos: (10, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Lt, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -7,7 +7,7 @@
+             if (n % i == 0):
+                 prime_flag = 1
+                 break
+-        if (prime_flag == 0):
++        if (prime_flag &lt; 0):
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">..F.
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_27"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_27_1" aria-expanded="false" aria-controls="job_list___sub_collapse_27_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_27_1"><button class="btn btn-outline-danger"><span class="job_id">27 : Job ID 5f4ba3fa659e465ba9cb1ea2b2168632</span></button></div></a><div aria-labelledby="job_list___sub_heading_27_1" data-parent="#job_list___sub_accordion_27" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_27_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.SURVIVED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 22), end pos: (7, 24)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_LtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n % i &lt;= 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_28"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_28_1" aria-expanded="false" aria-controls="job_list___sub_collapse_28_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_28_1"><button class="btn btn-outline-danger"><span class="job_id">28 : Job ID ae6f5014d3ea4ed2abbc35dc77f52c7f</span></button></div></a><div aria-labelledby="job_list___sub_heading_28_1" data-parent="#job_list___sub_accordion_28" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_28_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.SURVIVED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=10" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (10, 23), end pos: (10, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_LtE, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -7,7 +7,7 @@
+             if (n % i == 0):
+                 prime_flag = 1
+                 break
+-        if (prime_flag == 0):
++        if (prime_flag &lt;= 0):
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_29"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_29_1" aria-expanded="false" aria-controls="job_list___sub_collapse_29_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_29_1"><button class="btn btn-outline-success"><span class="job_id">29 : Job ID 286a690d0dfd4b259e48235df0543624</span></button></div></a><div aria-labelledby="job_list___sub_heading_29_1" data-parent="#job_list___sub_accordion_29" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_29_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 22), end pos: (7, 24)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Gt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n % i &gt; 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.FF.
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 17, in test_prime_numbers
+    self.assertTrue(is_prime2(5))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_30"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_30_1" aria-expanded="false" aria-controls="job_list___sub_collapse_30_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_30_1"><button class="btn btn-outline-success"><span class="job_id">30 : Job ID ee264304da044c8e87cde551ac5f7eb4</span></button></div></a><div aria-labelledby="job_list___sub_heading_30_1" data-parent="#job_list___sub_accordion_30" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_30_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=10" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (10, 23), end pos: (10, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Gt, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -7,7 +7,7 @@
+             if (n % i == 0):
+                 prime_flag = 1
+                 break
+-        if (prime_flag == 0):
++        if (prime_flag &gt; 0):
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">.FF.
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_31"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_31_1" aria-expanded="false" aria-controls="job_list___sub_collapse_31_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_31_1"><button class="btn btn-outline-success"><span class="job_id">31 : Job ID 4b793563ef0d485bbc8fbd4e6c7226b7</span></button></div></a><div aria-labelledby="job_list___sub_heading_31_1" data-parent="#job_list___sub_accordion_31" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_31_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 22), end pos: (7, 24)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_GtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n % i &gt;= 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">..F.
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 17, in test_prime_numbers
+    self.assertTrue(is_prime2(5))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_32"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_32_1" aria-expanded="false" aria-controls="job_list___sub_collapse_32_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_32_1"><button class="btn btn-outline-success"><span class="job_id">32 : Job ID 39bf0e79497944e9b6b9c5eb1f7e68f1</span></button></div></a><div aria-labelledby="job_list___sub_heading_32_1" data-parent="#job_list___sub_accordion_32" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_32_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=10" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (10, 23), end pos: (10, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_GtE, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -7,7 +7,7 @@
+             if (n % i == 0):
+                 prime_flag = 1
+                 break
+-        if (prime_flag == 0):
++        if (prime_flag &gt;= 0):
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_33"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_33_1" aria-expanded="false" aria-controls="job_list___sub_collapse_33_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_33_1"><button class="btn btn-outline-success"><span class="job_id">33 : Job ID f4ea8ac331de48f09faa9c817c067584</span></button></div></a><div aria-labelledby="job_list___sub_heading_33_1" data-parent="#job_list___sub_accordion_33" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_33_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (5, 9), end pos: (5, 10)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Gt_Eq, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -2,7 +2,7 @@
+ def is_prime2(n) -&gt; bool:
+     prime_flag = 0
+ 
+-    if(n &gt; 1):
++    if(n == 1):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1</pre></div><div class="alert alert-secondary"><pre class="diff">..FF
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_zero_and_one (prime_test.TestPrimeFile.test_zero_and_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 12, in test_zero_and_one
+    self.assertFalse(is_prime2(1))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_34"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_34_1" aria-expanded="false" aria-controls="job_list___sub_collapse_34_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_34_1"><button class="btn btn-outline-success"><span class="job_id">34 : Job ID dce9c15df9a24ed290c8be172c156e2b</span></button></div></a><div aria-labelledby="job_list___sub_heading_34_1" data-parent="#job_list___sub_accordion_34" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_34_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (5, 9), end pos: (5, 10)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Gt_NotEq, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -2,7 +2,7 @@
+ def is_prime2(n) -&gt; bool:
+     prime_flag = 0
+ 
+-    if(n &gt; 1):
++    if(n != 1):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1</pre></div><div class="alert alert-secondary"><pre class="diff">E..F
+======================================================================
+ERROR: test_negative_numbers_prime (prime_test.TestPrimeFile.test_negative_numbers_prime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 7, in test_negative_numbers_prime
+    self.assertFalse(is_prime2(-1))
+                     ^^^^^^^^^^^^^
+  File "/Users/qt/Working/mutation/prime.py", line 6, in is_prime2
+    for i in range(2, int(sqrt(n)) + 1):
+                          ^^^^^^^
+ValueError: math domain error
+
+======================================================================
+FAIL: test_zero_and_one (prime_test.TestPrimeFile.test_zero_and_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 11, in test_zero_and_one
+    self.assertFalse(is_prime2(0))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1, errors=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_35"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_35_1" aria-expanded="false" aria-controls="job_list___sub_collapse_35_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_35_1"><button class="btn btn-outline-success"><span class="job_id">35 : Job ID ceffdfc9eb5e449fb7eede6089f14dee</span></button></div></a><div aria-labelledby="job_list___sub_heading_35_1" data-parent="#job_list___sub_accordion_35" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_35_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (5, 9), end pos: (5, 10)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Gt_Lt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -2,7 +2,7 @@
+ def is_prime2(n) -&gt; bool:
+     prime_flag = 0
+ 
+-    if(n &gt; 1):
++    if(n &lt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1</pre></div><div class="alert alert-secondary"><pre class="diff">E.FF
+======================================================================
+ERROR: test_negative_numbers_prime (prime_test.TestPrimeFile.test_negative_numbers_prime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 7, in test_negative_numbers_prime
+    self.assertFalse(is_prime2(-1))
+                     ^^^^^^^^^^^^^
+  File "/Users/qt/Working/mutation/prime.py", line 6, in is_prime2
+    for i in range(2, int(sqrt(n)) + 1):
+                          ^^^^^^^
+ValueError: math domain error
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_zero_and_one (prime_test.TestPrimeFile.test_zero_and_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 11, in test_zero_and_one
+    self.assertFalse(is_prime2(0))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2, errors=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_36"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_36_1" aria-expanded="false" aria-controls="job_list___sub_collapse_36_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_36_1"><button class="btn btn-outline-success"><span class="job_id">36 : Job ID 10e596a44cc9472aaf86e54d3f196d5c</span></button></div></a><div aria-labelledby="job_list___sub_heading_36_1" data-parent="#job_list___sub_accordion_36" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_36_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (5, 9), end pos: (5, 10)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Gt_LtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -2,7 +2,7 @@
+ def is_prime2(n) -&gt; bool:
+     prime_flag = 0
+ 
+-    if(n &gt; 1):
++    if(n &lt;= 1):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1</pre></div><div class="alert alert-secondary"><pre class="diff">E.FF
+======================================================================
+ERROR: test_negative_numbers_prime (prime_test.TestPrimeFile.test_negative_numbers_prime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 7, in test_negative_numbers_prime
+    self.assertFalse(is_prime2(-1))
+                     ^^^^^^^^^^^^^
+  File "/Users/qt/Working/mutation/prime.py", line 6, in is_prime2
+    for i in range(2, int(sqrt(n)) + 1):
+                          ^^^^^^^
+ValueError: math domain error
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_zero_and_one (prime_test.TestPrimeFile.test_zero_and_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 11, in test_zero_and_one
+    self.assertFalse(is_prime2(0))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2, errors=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_37"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_37_1" aria-expanded="false" aria-controls="job_list___sub_collapse_37_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_37_1"><button class="btn btn-outline-success"><span class="job_id">37 : Job ID f85f6a767ed341c4a185c71cbaf4614c</span></button></div></a><div aria-labelledby="job_list___sub_heading_37_1" data-parent="#job_list___sub_accordion_37" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_37_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (5, 9), end pos: (5, 10)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Gt_GtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -2,7 +2,7 @@
+ def is_prime2(n) -&gt; bool:
+     prime_flag = 0
+ 
+-    if(n &gt; 1):
++    if(n &gt;= 1):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1</pre></div><div class="alert alert-secondary"><pre class="diff">...F
+======================================================================
+FAIL: test_zero_and_one (prime_test.TestPrimeFile.test_zero_and_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 12, in test_zero_and_one
+    self.assertFalse(is_prime2(1))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_38"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_38_1" aria-expanded="false" aria-controls="job_list___sub_collapse_38_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_38_1"><button class="btn btn-outline-success"><span class="job_id">38 : Job ID 9711ff772c864325b5fc47c74d1619e7</span></button></div></a><div aria-labelledby="job_list___sub_heading_38_1" data-parent="#job_list___sub_accordion_38" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_38_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (5, 6), end pos: (5, 13)</button></a></pre><pre>operator: core/AddNot, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -2,7 +2,7 @@
+ def is_prime2(n) -&gt; bool:
+     prime_flag = 0
+ 
+-    if(n &gt; 1):
++    if not(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1</pre></div><div class="alert alert-secondary"><pre class="diff">E.FF
+======================================================================
+ERROR: test_negative_numbers_prime (prime_test.TestPrimeFile.test_negative_numbers_prime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 7, in test_negative_numbers_prime
+    self.assertFalse(is_prime2(-1))
+                     ^^^^^^^^^^^^^
+  File "/Users/qt/Working/mutation/prime.py", line 6, in is_prime2
+    for i in range(2, int(sqrt(n)) + 1):
+                          ^^^^^^^
+ValueError: math domain error
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_zero_and_one (prime_test.TestPrimeFile.test_zero_and_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 11, in test_zero_and_one
+    self.assertFalse(is_prime2(0))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2, errors=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_39"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_39_1" aria-expanded="false" aria-controls="job_list___sub_collapse_39_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_39_1"><button class="btn btn-outline-success"><span class="job_id">39 : Job ID 2bc08aa11ffa42b1840e1ea907b4a14a</span></button></div></a><div aria-labelledby="job_list___sub_heading_39_1" data-parent="#job_list___sub_accordion_39" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_39_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 15), end pos: (7, 27)</button></a></pre><pre>operator: core/AddNot, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if not (n % i == 0):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.FF.
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 17, in test_prime_numbers
+    self.assertTrue(is_prime2(5))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_40"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_40_1" aria-expanded="false" aria-controls="job_list___sub_collapse_40_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_40_1"><button class="btn btn-outline-success"><span class="job_id">40 : Job ID 0573189c6cd74945bbd218cea89d1951</span></button></div></a><div aria-labelledby="job_list___sub_heading_40_1" data-parent="#job_list___sub_accordion_40" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_40_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=10" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (10, 11), end pos: (10, 28)</button></a></pre><pre>operator: core/AddNot, occurrence: 2</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -7,7 +7,7 @@
+             if (n % i == 0):
+                 prime_flag = 1
+                 break
+-        if (prime_flag == 0):
++        if not (prime_flag == 0):
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">.FF.
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_41"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_41_1" aria-expanded="false" aria-controls="job_list___sub_collapse_41_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_41_1"><button class="btn btn-outline-success"><span class="job_id">41 : Job ID d1c59075af914e3d8eb3ccdc2b0d62f3</span></button></div></a><div aria-labelledby="job_list___sub_heading_41_1" data-parent="#job_list___sub_accordion_41" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_41_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=11" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (11, 19), end pos: (11, 23)</button></a></pre><pre>operator: core/ReplaceTrueWithFalse, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -8,7 +8,7 @@
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):
+-            return True
++            return False
+         else:
+             return False
+     else:</pre></div><div class="alert alert-secondary"><pre class="diff">..F.
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_42"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_42_1" aria-expanded="false" aria-controls="job_list___sub_collapse_42_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_42_1"><button class="btn btn-outline-success"><span class="job_id">42 : Job ID 7f74e5692b124caa87cbaa561e8adf89</span></button></div></a><div aria-labelledby="job_list___sub_heading_42_1" data-parent="#job_list___sub_accordion_42" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_42_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=13" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (13, 19), end pos: (13, 24)</button></a></pre><pre>operator: core/ReplaceFalseWithTrue, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -10,7 +10,7 @@
+         if (prime_flag == 0):
+             return True
+         else:
+-            return False
++            return True
+     else:
+         return False
+ </pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_43"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_43_1" aria-expanded="false" aria-controls="job_list___sub_collapse_43_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_43_1"><button class="btn btn-outline-success"><span class="job_id">43 : Job ID 50bc6a54920d470f81c7f2be2fc10df2</span></button></div></a><div aria-labelledby="job_list___sub_heading_43_1" data-parent="#job_list___sub_accordion_43" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_43_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=15" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (15, 15), end pos: (15, 20)</button></a></pre><pre>operator: core/ReplaceFalseWithTrue, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -12,5 +12,5 @@
+         else:
+             return False
+     else:
+-        return False
++        return True
+ </pre></div><div class="alert alert-secondary"><pre class="diff">F..F
+======================================================================
+FAIL: test_negative_numbers_prime (prime_test.TestPrimeFile.test_negative_numbers_prime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 7, in test_negative_numbers_prime
+    self.assertFalse(is_prime2(-1))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_zero_and_one (prime_test.TestPrimeFile.test_zero_and_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 11, in test_zero_and_one
+    self.assertFalse(is_prime2(0))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_44"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_44_1" aria-expanded="false" aria-controls="job_list___sub_collapse_44_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_44_1"><button class="btn btn-outline-danger"><span class="job_id">44 : Job ID 161b32be727944409e96962dbe6a87f2</span></button></div></a><div aria-labelledby="job_list___sub_heading_44_1" data-parent="#job_list___sub_accordion_44" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_44_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.SURVIVED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=9" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (9, 16), end pos: (9, 21)</button></a></pre><pre>operator: core/ReplaceBreakWithContinue, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -6,7 +6,7 @@
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1
+-                break
++                continue
+         if (prime_flag == 0):
+             return True
+         else:</pre></div><div class="alert alert-secondary"><pre class="diff">....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_45"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_45_1" aria-expanded="false" aria-controls="job_list___sub_collapse_45_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_45_1"><button class="btn btn-outline-success"><span class="job_id">45 : Job ID 2bb24ce783484578b3d6407d450e3fc3</span></button></div></a><div aria-labelledby="job_list___sub_heading_45_1" data-parent="#job_list___sub_accordion_45" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_45_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=3" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (3, 17), end pos: (3, 18)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -1,6 +1,6 @@
+ from math import sqrt
+ def is_prime2(n) -&gt; bool:
+-    prime_flag = 0
++    prime_flag = 1
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):</pre></div><div class="alert alert-secondary"><pre class="diff">..F.
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_46"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_46_1" aria-expanded="false" aria-controls="job_list___sub_collapse_46_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_46_1"><button class="btn btn-outline-success"><span class="job_id">46 : Job ID a1bb6c2ed84e4c8baa4ee02013524527</span></button></div></a><div aria-labelledby="job_list___sub_heading_46_1" data-parent="#job_list___sub_accordion_46" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_46_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=3" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (3, 17), end pos: (3, 18)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -1,6 +1,6 @@
+ from math import sqrt
+ def is_prime2(n) -&gt; bool:
+-    prime_flag = 0
++    prime_flag = -1
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):</pre></div><div class="alert alert-secondary"><pre class="diff">..F.
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_47"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_47_1" aria-expanded="false" aria-controls="job_list___sub_collapse_47_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_47_1"><button class="btn btn-outline-success"><span class="job_id">47 : Job ID b7298a345b3a4351b4c00373a01c8a50</span></button></div></a><div aria-labelledby="job_list___sub_heading_47_1" data-parent="#job_list___sub_accordion_47" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_47_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (5, 11), end pos: (5, 12)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 2</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -2,7 +2,7 @@
+ def is_prime2(n) -&gt; bool:
+     prime_flag = 0
+ 
+-    if(n &gt; 1):
++    if(n &gt; 2):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1</pre></div><div class="alert alert-secondary"><pre class="diff">..F.
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_48"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_48_1" aria-expanded="false" aria-controls="job_list___sub_collapse_48_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_48_1"><button class="btn btn-outline-success"><span class="job_id">48 : Job ID 7ddda2e2bd854592a14ea22fdd0b70d5</span></button></div></a><div aria-labelledby="job_list___sub_heading_48_1" data-parent="#job_list___sub_accordion_48" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_48_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (5, 11), end pos: (5, 12)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 3</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -2,7 +2,7 @@
+ def is_prime2(n) -&gt; bool:
+     prime_flag = 0
+ 
+-    if(n &gt; 1):
++    if(n &gt; 0):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1</pre></div><div class="alert alert-secondary"><pre class="diff">...F
+======================================================================
+FAIL: test_zero_and_one (prime_test.TestPrimeFile.test_zero_and_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 12, in test_zero_and_one
+    self.assertFalse(is_prime2(1))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_49"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_49_1" aria-expanded="false" aria-controls="job_list___sub_collapse_49_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_49_1"><button class="btn btn-outline-success"><span class="job_id">49 : Job ID 42b5058f821f47c4a1833543730fb6e1</span></button></div></a><div aria-labelledby="job_list___sub_heading_49_1" data-parent="#job_list___sub_accordion_49" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_49_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 23), end pos: (6, 24)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 4</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range( 3, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_50"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_50_1" aria-expanded="false" aria-controls="job_list___sub_collapse_50_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_50_1"><button class="btn btn-outline-success"><span class="job_id">50 : Job ID f9ccd0f07df645ac953a1498b2f219e9</span></button></div></a><div aria-labelledby="job_list___sub_heading_50_1" data-parent="#job_list___sub_accordion_50" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_50_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 23), end pos: (6, 24)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 5</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range( 1, int(sqrt(n)) + 1):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">..F.
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_51"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_51_1" aria-expanded="false" aria-controls="job_list___sub_collapse_51_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_51_1"><button class="btn btn-outline-success"><span class="job_id">51 : Job ID 857dfdbafb1a426c8c4b0bcad749716d</span></button></div></a><div aria-labelledby="job_list___sub_heading_51_1" data-parent="#job_list___sub_accordion_51" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_51_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 41), end pos: (6, 42)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 6</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) + 2):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">..F.
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_52"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_52_1" aria-expanded="false" aria-controls="job_list___sub_collapse_52_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_52_1"><button class="btn btn-outline-success"><span class="job_id">52 : Job ID db6221fa0e2d48a5965b88a622480702</span></button></div></a><div aria-labelledby="job_list___sub_heading_52_1" data-parent="#job_list___sub_accordion_52" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_52_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 41), end pos: (6, 42)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 7</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in range(2, int(sqrt(n)) + 0):
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_53"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_53_1" aria-expanded="false" aria-controls="job_list___sub_collapse_53_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_53_1"><button class="btn btn-outline-success"><span class="job_id">53 : Job ID 04043aa4ca904c51ac4990c66e3a2f86</span></button></div></a><div aria-labelledby="job_list___sub_heading_53_1" data-parent="#job_list___sub_accordion_53" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_53_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 25), end pos: (7, 26)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 8</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n % i == 1):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.FF.
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 17, in test_prime_numbers
+    self.assertTrue(is_prime2(5))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_54"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_54_1" aria-expanded="false" aria-controls="job_list___sub_collapse_54_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_54_1"><button class="btn btn-outline-success"><span class="job_id">54 : Job ID 5227ee327e3f433ead2c069c94aba478</span></button></div></a><div aria-labelledby="job_list___sub_heading_54_1" data-parent="#job_list___sub_accordion_54" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_54_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=7" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (7, 25), end pos: (7, 26)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 9</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -4,7 +4,7 @@
+ 
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+-            if (n % i == 0):
++            if (n % i == -1):
+                 prime_flag = 1
+                 break
+         if (prime_flag == 0):</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_55"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_55_1" aria-expanded="false" aria-controls="job_list___sub_collapse_55_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_55_1"><button class="btn btn-outline-danger"><span class="job_id">55 : Job ID a52c9a9d92e14eaf8bb0d19ae31b3dcf</span></button></div></a><div aria-labelledby="job_list___sub_heading_55_1" data-parent="#job_list___sub_accordion_55" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_55_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.SURVIVED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=8" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (8, 29), end pos: (8, 30)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 10</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -5,7 +5,7 @@
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+-                prime_flag = 1
++                prime_flag = 2
+                 break
+         if (prime_flag == 0):
+             return True</pre></div><div class="alert alert-secondary"><pre class="diff">....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_56"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_56_1" aria-expanded="false" aria-controls="job_list___sub_collapse_56_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_56_1"><button class="btn btn-outline-success"><span class="job_id">56 : Job ID 7ed5a03632814b28acf09df9c3790b27</span></button></div></a><div aria-labelledby="job_list___sub_heading_56_1" data-parent="#job_list___sub_accordion_56" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_56_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=8" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (8, 29), end pos: (8, 30)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 11</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -5,7 +5,7 @@
+     if(n &gt; 1):
+         for i in range(2, int(sqrt(n)) + 1):
+             if (n % i == 0):
+-                prime_flag = 1
++                prime_flag = 0
+                 break
+         if (prime_flag == 0):
+             return True</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_57"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_57_1" aria-expanded="false" aria-controls="job_list___sub_collapse_57_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_57_1"><button class="btn btn-outline-success"><span class="job_id">57 : Job ID c0099b6540914d5ba954c58298b87232</span></button></div></a><div aria-labelledby="job_list___sub_heading_57_1" data-parent="#job_list___sub_accordion_57" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_57_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=10" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (10, 26), end pos: (10, 27)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 12</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -7,7 +7,7 @@
+             if (n % i == 0):
+                 prime_flag = 1
+                 break
+-        if (prime_flag == 0):
++        if (prime_flag == 1):
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">.FF.
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=2)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_58"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_58_1" aria-expanded="false" aria-controls="job_list___sub_collapse_58_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_58_1"><button class="btn btn-outline-success"><span class="job_id">58 : Job ID aea9371c2edb41e4924cc90fd7f93aac</span></button></div></a><div aria-labelledby="job_list___sub_heading_58_1" data-parent="#job_list___sub_accordion_58" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_58_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=10" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (10, 26), end pos: (10, 27)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 13</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -7,7 +7,7 @@
+             if (n % i == 0):
+                 prime_flag = 1
+                 break
+-        if (prime_flag == 0):
++        if (prime_flag == -1):
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">..F.
+======================================================================
+FAIL: test_prime_numbers (prime_test.TestPrimeFile.test_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 15, in test_prime_numbers
+    self.assertTrue(is_prime2(2))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_59"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_59_1" aria-expanded="false" aria-controls="job_list___sub_collapse_59_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_59_1"><button class="btn btn-outline-success"><span class="job_id">59 : Job ID 445cfb1421eb424bb8b9ecd64bbb5a13</span></button></div></a><div aria-labelledby="job_list___sub_heading_59_1" data-parent="#job_list___sub_accordion_59" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_59_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=prime.py&amp;line=6" class="text-secondary"><button class="btn btn-outline-dark">prime.py, start pos: (6, 17), end pos: (6, 43)</button></a></pre><pre>operator: core/ZeroIterationForLoop, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aprime.py
++++ bprime.py
+@@ -3,7 +3,7 @@
+     prime_flag = 0
+ 
+     if(n &gt; 1):
+-        for i in range(2, int(sqrt(n)) + 1):
++        for i in []:
+             if (n % i == 0):
+                 prime_flag = 1
+                 break</pre></div><div class="alert alert-secondary"><pre class="diff">.F..
+======================================================================
+FAIL: test_non_prime_numbers (prime_test.TestPrimeFile.test_non_prime_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/qt/Working/mutation/prime_test.py", line 23, in test_non_prime_numbers
+    self.assertFalse(is_prime2(4))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
+</pre></div></div></div></div></div></div></div></div></div></div><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script type="text/javascript">$('div.job_list___sub_multi_collapse').on('shown.bs.collapse',  function () {    correct_behavior_functional_buttons();  });$('div.job_list___sub_multi_collapse').on('hidden.bs.collapse',  function () {    correct_behavior_functional_buttons();  });function correct_behavior_functional_buttons() {    var expand = false;    var collapse = false;    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'false') {        expand = true;        return false;      };    });    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'true') {        collapse = true;        return false;      };    });    if (expand) {      $('div#job_item_expand_all').css('display', 'inline-block');    } else {      $('div#job_item_expand_all').css('display', 'none');    };    if (collapse) {      $('div#job_item_collapse_all').css('display', 'inline-block');    } else {      $('div#job_item_collapse_all').css('display', 'none');    };  };correct_behavior_functional_buttons();</script></body></html>
